@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kizhoo Quiz - Game Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <h1>Quiz Duel</h1>
+            </div>
+            <div class="settings-bar">
+                <div class="language-selector">
+                    <div class="language-btn">
+                        <i class="fas fa-globe"></i>
+                        <span>Bahasa Indonesia</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <div class="language-option active" data-lang="id">
+                            <i class="fas fa-flag"></i>
+                            <span>Bahasa Indonesia</span>
+                        </div>
+                        <div class="language-option" data-lang="en">
+                            <i class="fas fa-flag-usa"></i>
+                            <span>English</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-outline" id="settings-btn">
+                    <i class="fas fa-cog"></i>
+                    <span>Pengaturan</span>
+                </button>
+            </div>
+        </header>
+
+        <main id="main-content">
+            <!-- Konten akan diisi secara dinamis -->
+        </main>
+    </div>
+
+    <!-- Modal Pengaturan -->
+    <div class="modal" id="settings-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="section-title">
+                    <i class="fas fa-cog"></i>
+                    <span>Pengaturan</span>
+                </h2>
+                <button class="close-modal" id="close-modal">&times;</button>
+            </div>
+            
+            <div class="setting-item">
+                <label class="setting-label">Tampilan</label>
+                <div class="select-container">
+                    <select id="theme-select">
+                        <option value="dark">Mode Gelap (Default)</option>
+                        <option value="light">Mode Terang</option>
+                        <option value="blue">Mode Biru</option>
+                        <option value="purple">Mode Ungu</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="setting-item">
+                <label class="setting-label">Efek Suara</label>
+                <div class="toggle-container">
+                    <span>Nonaktif</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="sound-toggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span>Aktif</span>
+                </div>
+            </div>
+            
+            <div class="setting-item">
+                <label class="setting-label">Animasi</label>
+                <div class="toggle-container">
+                    <span>Nonaktif</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="animation-toggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <span>Aktif</span>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; text-align: center;">
+                <button class="btn btn-primary" id="save-settings">
+                    <i class="fas fa-save"></i>
+                    Simpan Pengaturan
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="api.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
